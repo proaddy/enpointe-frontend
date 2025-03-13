@@ -138,7 +138,7 @@ const BankerDashboard = () => {
                         <tr key={transaction.id}>
                           <td className="py-2 px-4 border-b">{transaction.id}</td>
                           <td className="py-2 px-4 border-b">{new Date(transaction.created_at).toLocaleDateString()}</td>
-                          <td className="py-2 px-4 border-b">${transaction.amount}</td>
+                          <td className="py-2 px-4 border-b">₹{transaction.amount}</td>
                           <td className="py-2 px-4 border-b">{transaction.type}</td>
                           <td className="py-2 px-4 border-b">{transaction.description}</td>
                         </tr>
