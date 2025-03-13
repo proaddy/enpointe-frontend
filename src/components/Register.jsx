@@ -16,7 +16,7 @@ const Login = () => {
     setError('');
     
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/user/register`, {
+      const response = await fetch(`https://enpointe-backend.onrender.com/api/auth/user/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ const Login = () => {
             Register
           </button>
         </form>
-        <p className='flex justify-between text-sm mt-2'>Already have a account? <a className='text-blue-500' href="http://localhost:5173/login">Login here</a></p>
+        <p className='flex justify-between text-sm mt-2 cursor-pointer'>Already have a account? <a className='text-blue-500' onClick={()=>navigate('/login')}>Login here</a></p>
       </div>
     </div>
   );

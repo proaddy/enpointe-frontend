@@ -19,7 +19,7 @@ const BankerDashboard = () => {
           return;
         }
 
-        const response = await fetch('http://localhost:5000/api/banker/users', {
+        const response = await fetch('https://enpointe-backend.onrender.com/api/banker/users', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -46,7 +46,7 @@ const BankerDashboard = () => {
       setLoading(true);
       const token = localStorage.getItem('token');
       
-      const response = await fetch(`http://localhost:5000/api/banker/users/${userId}/transactions`, {
+      const response = await fetch(`https://enpointe-backend.onrender.com/api/banker/users/${userId}/transactions`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

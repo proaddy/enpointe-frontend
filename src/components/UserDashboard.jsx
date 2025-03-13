@@ -23,7 +23,7 @@ const UserDashboard = () => {
         }
 
         // Fetch transactions
-        const transactionsResponse = await fetch('http://localhost:5000/api/user/transactions', {
+        const transactionsResponse = await fetch('https://enpointe-backend.onrender.com/api/user/transactions', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -38,7 +38,7 @@ const UserDashboard = () => {
         setTransactions(transactionsData.transactions);
 
         // Fetch balance
-        const balanceResponse = await fetch('http://localhost:5000/api/user/balance', {
+        const balanceResponse = await fetch('https://enpointe-backend.onrender.com/api/user/balance', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -103,7 +103,7 @@ const UserDashboard = () => {
       }
       
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/user/${modalType}`, {
+      const response = await fetch(`https://enpointe-backend.onrender.com/api/user/${modalType}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
